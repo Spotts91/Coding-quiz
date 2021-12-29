@@ -173,6 +173,39 @@ header {
     margin-left: 25px;
 }
 
+#answer1:hover{
+    background-color: pink;
+}
 
+#answer2:hover{
+    background-color: pink;
+}
+
+#answer3:hover{
+    background-color: pink;
+}
+
+#answer4:hover{
+    background-color: pink;
+}
+
+#submitScore:hover{
+    background-color: pink;
+}
+
+#answerCorrectWrongGrid {
+    width: 65%;
+    display: grid;
+    grid-template-columns: 4fr; /* Create a 4x4 grid of same size */
+    grid-template-rows: repeat(2, 1fr); /* 4 rows of equal size */
+    gap: 10px 10px; /* Gap on x and y grid */
+    font-family: 'Merienda';font-size: 22px;
+}
+
+#answerCorrectWrong {
+    text-align: left;
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+}
 
 
