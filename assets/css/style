@@ -10,5 +10,16 @@ body {
 }
 
 header {
-    
+    display: flex; /* Flex container to display the child elements as flex with space between and wrap */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    color: blueviolet;
+    height: 60px;
+    font-size: 2vw;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Merienda';font-size: 22px;
 }
+
