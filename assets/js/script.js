@@ -95,5 +95,70 @@ viewHighScoresBtnEl.addEventListener("click", function () { // View high scores
 });
 
 submitScoreEl.addEventListener("click", function() { // Submit high scores
+    var quizLocalStorage = "quiz";
+    var quizUserDetails = "";
+    var value = [];
+    //If good input the values will be assigned properly.
+    quizUserDetails = quizLocalStorage + enterInitialsTextArea.value
+    value = [quizUserDetails,highScore] //Create an array for validation
+    if (!localStorage.length) {
+        localStorage.setItem("test","test");
+    }
 
-}
+    for (var i=0; i < localStorage.length; i++){
+        var checkUser="";
+        var checkUserValue = [];
+        //Assign value again
+        quizUserDetails = quizLocalStorage + enterInitialsTextArea.value;
+        // check if assigned values exist in local storage
+        checkUser = localStorage.getItem(quizUserDetails);
+        //quizInitial + score will be checked against the input from user
+        if (checkUser == null) {
+            localStorage.setItem(quizUserDetails, value);
+            window.alert("Your score of " + highScore + "has been submitted!");
+            break;
+        } else if (checkUser != null){
+            checkUserValue = checkUser.split(",");
+    }
+
+    if( quizUserDetails == checkUserValue[0] && highScore == checkUserValue[1]) {
+        localStorage.setItem(quizUserDetails, value);
+        window.alert(highScore + " " + "is the latest entry for the user initial" + enterInitialsTextArea.value + ". Entry will not be added.")
+        break;
+        } else if (enterInitialsTextArea.value == "") {
+            window.alert("Please enter an initial");
+            break;
+        } else if (quizUserDetails == checkUserValue[0] && highScore > checkUserValue [1]) {
+            localStorage.setItem(quizUserDetails, value);
+            window.alert("New high score of" + highScore + "has been submitted!.\nYour previous score was" +checkUserValue[1])
+            break;
+        } else if (quizUserDetails == checkUserValue[0] && highScore < checkUserValue[1]) {
+            localStorage.setItem(quizUserDetails, value);
+            window.alert("Your previous code of" + checkUserValue[1] + "what higher. Entry will not be added.");
+            break;
+        } else {
+            localStorage.setItem(quizUserDetails, value);
+            window.alert("Your score of" + highScore + "has been submitted!")
+            break;
+        }
+    };
+
+answer1BtnEl.addEventListener("mouseover", function () {
+    answerCorrectWrong.style.display='none';
+});
+
+answer2BtnEl.addEventListener("mouseover", function () {
+    answerCorrectWrong.style.display='none';
+});
+
+answer3BtnEl.addEventListener("mouseover", function () {
+    answerCorrectWrong.style.display='none';
+});
+
+answer4BtnEl.addEventListener("mouseover", function () {
+    answerCorrectWrong.style.display='none';
+});
+
+
+
+
