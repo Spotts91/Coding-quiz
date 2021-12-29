@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Merienda' ;font-size: 22px;
+    font-family: 'Merienda';font-size: 22px;
     background-color: white;
 }
 
@@ -21,20 +21,24 @@ header {
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'Merienda';font-size: 22px;
-}
+  }
 
 .btnHeader {
     border-radius: 10px;
     background-color: white;
     text-decoration: none;
     border: 0;
-    outline: 0; /*remove border aroun button */
+    outline: 0; /* Remove border around button */
     color: blueviolet;
     font-family: 'Merienda';font-size: 20px;
 }
 
 .btnHeader:hover {
+
     background-color: pink;
+    
+  
+    
 }
 
 .btn {
@@ -45,6 +49,8 @@ header {
     color: white;
     font-family: 'Merienda';font-size: 10px;
 }
+
+
 
 #mainDiv {
     margin-left: 25%;
@@ -57,14 +63,18 @@ header {
     font-family: 'Merienda';font-size: 22px;
 }
 
+
+
+
 #gridContainer {
-    width: 65%; /*Contain the grid to a maximum of 80% of the flex wrapper */
+   /* width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
     display: grid;
-    grid-template-columns: repeat(2. 1fr) 2fr 1fr; /*Create a 4x4 grid of same size */
-    grid-template-rows: repeat(10, 1fr); /*4 rows of equal size */
+    grid-template-columns: repeat(2, 1fr) 2fr 1fr;  /* Create a 4X4 grid of same size*/
+    grid-template-rows: repeat(10, 1fr); /* 4 rows of equal size */
     gap: 10px 10px; /* Gap on x and y grid */
     font-family: 'Merienda';font-size: 22px;
 }
+
 
 #questionDisplay {
     text-align: center;
@@ -76,22 +86,29 @@ header {
 }
 
 #finalScoreDisplay {
+    
     grid-column: 1 / span 2;
     grid-row: 6 / span 1;
     font-size: 15px;
 }
 
+
+
 #enterInitials {
+    
     grid-column: 1 / span 1;
     grid-row: 7 / span 1;
     font-size: 15px;
 }
 
+
 #enterInitialsTextArea {
+    
     grid-column: 2 / span 1;
     grid-row: 7 / span 1;
     font-size: 15px;
     resize: none;
+    
 }
 
 #submitScore {
@@ -100,7 +117,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0; /*Remove border around button */
+    outline: 0; /* Remove border around button */
     background-color: purple;
     color: white;
     font-family: 'Merienda';font-size: 15px;
@@ -112,7 +129,7 @@ header {
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
     border: 0;
-    outline: 0;
+    outline: 0; /* Remove border around button */
     background-color: purple;
     place-self: center;
     color: white;
@@ -121,11 +138,11 @@ header {
 
 #answer1 {
     grid-column: 1 / span 2;
-    grid-row: 7 / span 1;
+    grid-row: 6 / span 1;
     padding: 10px 10px 10px 10px;
     border-radius: 10%;
-    border:0;
-    outline:0;
+    border: 0;
+    outline: 0; /* Remove border around button */
     background-color: purple;
     color: white;
     font-family: 'Merienda';font-size: 15px;
@@ -173,110 +190,159 @@ header {
     margin-left: 25px;
 }
 
+
+
+
+
+
 #answer1:hover{
+    
     background-color: pink;
+     
 }
 
 #answer2:hover{
+    
     background-color: pink;
+  
 }
 
 #answer3:hover{
+    
     background-color: pink;
+  
 }
 
 #answer4:hover{
+    
     background-color: pink;
+  
 }
 
 #submitScore:hover{
+    
     background-color: pink;
+  
 }
 
+
+
 #answerCorrectWrongGrid {
-    width: 65%;
+    /*width:65%; /* Contain the grid to a maximum of 80% of the flex wrapper */
     display: grid;
-    grid-template-columns: 4fr; /* Create a 4x4 grid of same size */
+    grid-template-columns: 4fr;  /* Create a 4X4 grid of same size*/
     grid-template-rows: repeat(2, 1fr); /* 4 rows of equal size */
     gap: 10px 10px; /* Gap on x and y grid */
     font-family: 'Merienda';font-size: 22px;
+
 }
 
 #answerCorrectWrong {
     text-align: left;
     grid-column: 1 / span 4;
     grid-row: 1 / span 2;
+    
 }
+
 
 /* This will be applied on any screen smaller than 768px */
 @media screen and (max-width: 768px) {
 
+
+    
     #answer1:hover{
+        
         background-color: purple;
+        
     }
 
     #answer2:hover{
+        
         background-color: purple;
+    
     }
 
     #answer3:hover{
+        
         background-color: purple;
+    
     }
 
     #answer4:hover{
+        
         background-color: purple;
+    
     }
 
     #submitScore:hover{
+        
         background-color: purple;
+    
     }
+
+
 
     #questionDisplay {
         font-size: 25px;
     }
-
+    
     #answer1 {
         grid-column: 2 / span 2;
     }
-
+    
     #answer2 {
         grid-column: 2 / span 2;
+           
     }
-
+    
     #answer3 {
         grid-column: 2 / span 2;
     }
-
-    #answer4 { 
+    
+    #answer4 {
         grid-column: 2 / span 2;
     }
+    
+  
+
 }
 
 
-/* This will be applied to any screen smaller than 575px */
-@media screen and (max-width: 575px) {
+   /* This will be applied on any screen smaller than 575px */
+@media screen and  (max-width: 575px) {
 
     #answer1:hover{
+        
         background-color: purple;
+        
     }
 
     #answer2:hover{
+        
         background-color: purple;
+    
     }
 
     #answer3:hover{
+        
         background-color: purple;
+    
     }
 
     #answer4:hover{
+        
         background-color: purple;
+    
     }
 
     #submitScore:hover{
+        
         background-color: purple;
+    
     }
 
-    #mainDiv{
+
+    #mainDiv {
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -285,5 +351,6 @@ header {
         grid-column: 2 / span 2;
         font-size: 15px;
     }
-}
+  
 
+  }
